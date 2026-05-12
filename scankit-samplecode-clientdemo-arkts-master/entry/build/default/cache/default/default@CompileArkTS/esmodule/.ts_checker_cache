@@ -97,7 +97,8 @@
       "parent": [
         "F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets\\entryability\\EntryAbility.ets",
         "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.arkui.UIContext.d.ts",
-        "F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets\\pages\\customScan\\model\\UIContextSelf.ets"
+        "F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets\\pages\\customScan\\model\\UIContextSelf.ets",
+        "F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets\\pages\\scanHistory\\ScanHistory.ets"
       ],
       "error": false
     },
@@ -206,7 +207,8 @@
         "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.web.webview.d.ts",
         "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.security.cert.d.ts",
         "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.security.cryptoFramework.d.ts",
-        "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.print.d.ts"
+        "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.print.d.ts",
+        "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.preferences.d.ts"
       ],
       "error": false
     },
@@ -699,7 +701,8 @@
         "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.app.ability.common.d.ts",
         "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\app\\context.d.ts",
         "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.rdb.d.ts",
-        "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.multimedia.camera.d.ts"
+        "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.multimedia.camera.d.ts",
+        "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.preferences.d.ts"
       ],
       "error": false
     },
@@ -1984,7 +1987,7 @@
       "error": false
     },
     "F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets\\pages\\Index.ets": {
-      "mtimeMs": 1776762977100.387,
+      "mtimeMs": 1778579963915.9097,
       "children": [
         "F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets\\common\\CommonComponents.ets",
         "F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets\\pages\\customScan\\model\\UIContextSelf.ets"
@@ -2320,7 +2323,7 @@
       "error": false
     },
     "F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets\\pages\\resultPage\\ResultPage.ets": {
-      "mtimeMs": 1776762977758.4243,
+      "mtimeMs": 1778579569115.5574,
       "children": [
         "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.arkui.node.d.ts",
         "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\hms\\ets\\api\\@hms.core.scan.scanBarcode.d.ts",
@@ -2328,10 +2331,15 @@
         "F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets\\common\\StatusBar.ets",
         "F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets\\common\\Utils.ets",
         "F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets\\pages\\customScan\\model\\UIContextSelf.ets",
-        "F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets\\pages\\customScan\\model\\WindowService.ets"
+        "F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets\\pages\\customScan\\model\\WindowService.ets",
+        "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.preferences.d.ts",
+        "F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets\\common\\mode1\\ScanRecord.ets"
       ],
       "parent": [],
-      "error": false
+      "error": true,
+      "errorCodes": [
+        28007
+      ]
     },
     "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\hms\\ets\\api\\@hms.core.scan.customScan.d.ts": {
       "mtimeMs": 1774582692000,
@@ -3394,6 +3402,40 @@
         "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.security.cert.d.ts"
       ],
       "error": false
+    },
+    "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.preferences.d.ts": {
+      "mtimeMs": 1774582692000,
+      "children": [
+        "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.base.d.ts",
+        "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\application\\BaseContext.d.ts"
+      ],
+      "parent": [
+        "F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets\\pages\\resultPage\\ResultPage.ets",
+        "F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets\\pages\\scanHistory\\ScanHistory.ets"
+      ],
+      "error": false
+    },
+    "F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets\\common\\mode1\\ScanRecord.ets": {
+      "mtimeMs": 1778578756664.1504,
+      "children": [],
+      "parent": [
+        "F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets\\pages\\resultPage\\ResultPage.ets",
+        "F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets\\pages\\scanHistory\\ScanHistory.ets"
+      ],
+      "error": false
+    },
+    "F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets\\pages\\scanHistory\\ScanHistory.ets": {
+      "mtimeMs": 1778579186480.6343,
+      "children": [
+        "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.router.d.ts",
+        "F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets\\common\\mode1\\ScanRecord.ets",
+        "C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.preferences.d.ts"
+      ],
+      "parent": [],
+      "error": true,
+      "errorCodes": [
+        28007
+      ]
     }
   }
 }

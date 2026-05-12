@@ -12,13 +12,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 import { LengthMetrics } from '@kit.ArkUI';
 import { scanBarcode, scanCore } from '@kit.ScanKit';
 import { StatusBar } from '../../common/StatusBar';
 import { getScanTypeKey } from '../../common/Utils'
 import { UIContextSelf } from '../customScan/model/UIContextSelf';
 import { WindowService } from '../customScan/model/WindowService';
+// 新增：导入保存记录需要的模块
+import { preferences } from '@kit.ArkData';
+import { ScanRecord } from '../../common/mode1/ScanRecord';
 
 @Extend(Text)
 function labelText() {
@@ -42,6 +45,46 @@ function valueText() {
 struct ResultPage {
   @State result: scanBarcode.ScanResult = UIContextSelf.getRouter().getParams() as scanBarcode.ScanResult;
   @State windowService: WindowService = WindowService.getInstance();
+
+  // 新增：页面加载时自动保存扫码记录
+  async aboutToAppear() {
+    await this.saveScanRecord();
+  }
+
+  // 新增：保存扫码记录到本地存储的方法
+  async saveScanRecord() {
+    try {
+      // 1. 创建记录对象，用你已有的 getScanTypeKey 获取准确的扫码类型
+      const record = new ScanRecord(
+        this.result.originalValue,
+        getScanTypeKey(this.result.scanType)
+      );
+
+      // 2. 初始化本地存储
+      const context = getContext(this);
+      const prefs = await preferences.getPreferences(context, 'scan_history');
+
+      // 3. 读取已有的历史记录
+      const jsonStr = await prefs.get('records', '[]') as string;
+      const records: ScanRecord[] = JSON.parse(jsonStr) || [];
+
+      // 4. 把新记录加到最前面（最新的在最上面）
+      records.unshift(record);
+
+      // 5. 限制最多保存50条，避免数据过多
+      if (records.length > 50) {
+        records.pop();
+      }
+
+      // 6. 保存回本地存储
+      await prefs.put('records', JSON.stringify(records));
+      await prefs.flush();
+
+      console.log("扫码记录保存成功:", record.content);
+    } catch (err) {
+      console.error("保存扫码记录失败:", JSON.stringify(err));
+    }
+  }
 
   build() {
     Stack() {

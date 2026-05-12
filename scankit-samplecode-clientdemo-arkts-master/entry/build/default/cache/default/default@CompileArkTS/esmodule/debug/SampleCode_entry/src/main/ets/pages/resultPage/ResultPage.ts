@@ -12,6 +12,8 @@ import { StatusBar } from "@bundle:com.example.scanSample/SampleCode_entry/ets/c
 import { getScanTypeKey } from "@bundle:com.example.scanSample/SampleCode_entry/ets/common/Utils";
 import { UIContextSelf } from "@bundle:com.example.scanSample/SampleCode_entry/ets/pages/customScan/model/UIContextSelf";
 import { WindowService } from "@bundle:com.example.scanSample/SampleCode_entry/ets/pages/customScan/model/WindowService";
+import preferences from "@ohos:data.preferences";
+import { ScanRecord } from "@bundle:com.example.scanSample/SampleCode_entry/ets/common/mode1/ScanRecord";
 function __Text__labelText(): void {
     Text.fontSize(20);
     Text.textAlign(TextAlign.Start);
@@ -69,6 +71,36 @@ class ResultPage extends ViewPU {
     }
     set windowService(newValue: WindowService) {
         this.__windowService.set(newValue);
+    }
+    // 新增：页面加载时自动保存扫码记录
+    async aboutToAppear() {
+        await this.saveScanRecord();
+    }
+    // 新增：保存扫码记录到本地存储的方法
+    async saveScanRecord() {
+        try {
+            // 1. 创建记录对象，用你已有的 getScanTypeKey 获取准确的扫码类型
+            const record = new ScanRecord(this.result.originalValue, getScanTypeKey(this.result.scanType));
+            // 2. 初始化本地存储
+            const context = getContext(this);
+            const prefs = await preferences.getPreferences(context, 'scan_history');
+            // 3. 读取已有的历史记录
+            const jsonStr = await prefs.get('records', '[]') as string;
+            const records: ScanRecord[] = JSON.parse(jsonStr) || [];
+            // 4. 把新记录加到最前面（最新的在最上面）
+            records.unshift(record);
+            // 5. 限制最多保存50条，避免数据过多
+            if (records.length > 50) {
+                records.pop();
+            }
+            // 6. 保存回本地存储
+            await prefs.put('records', JSON.stringify(records));
+            await prefs.flush();
+            console.log("扫码记录保存成功:", record.content);
+        }
+        catch (err) {
+            console.error("保存扫码记录失败:", JSON.stringify(err));
+        }
     }
     initialRender() {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
@@ -199,7 +231,7 @@ class ResultPage extends ViewPU {
         {
             this.observeComponentCreation2((elmtId, isInitialRender) => {
                 if (isInitialRender) {
-                    let componentCall = new StatusBar(this, { title: { "id": 16777275, "type": 10003, params: [], "bundleName": "com.example.scanSample", "moduleName": "SampleCode_entry" } }, undefined, elmtId, () => { }, { page: "entry/src/main/ets/pages/resultPage/ResultPage.ets", line: 104, col: 7 });
+                    let componentCall = new StatusBar(this, { title: { "id": 16777275, "type": 10003, params: [], "bundleName": "com.example.scanSample", "moduleName": "SampleCode_entry" } }, undefined, elmtId, () => { }, { page: "entry/src/main/ets/pages/resultPage/ResultPage.ets", line: 147, col: 7 });
                     ViewPU.create(componentCall);
                     let paramsLambda = () => {
                         return {

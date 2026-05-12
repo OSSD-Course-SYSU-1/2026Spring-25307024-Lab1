@@ -890,3 +890,713 @@ at F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\src\main\resource
 [2026-04-21T17:18:01.467] [DEBUG] debug-file - worker[1] exits with exit code 1.
 [2026-04-21T17:18:01.471] [DEBUG] debug-file - worker[18] exits with exit code 1.
 [2026-04-21T17:18:01.472] [DEBUG] debug-file - worker[17] exits with exit code 1.
+[2026-05-12T19:10:33.256] [DEBUG] debug-file - java daemon tryConnect failed Error: connect ECONNREFUSED 127.0.0.1:45050
+[2026-05-12T19:10:33.267] [DEBUG] debug-file - java daemon started at port 45050 pid 31904
+[2026-05-12T19:10:31.028] [DEBUG] debug-file - env: nodejsVersion=v18.20.1
+[2026-05-12T19:10:31.171] [DEBUG] debug-file - env: daemon=true
+[2026-05-12T19:10:31.028] [DEBUG] debug-file - env: hvigor-config.json5 content = { modelVersion: '5.0.0', dependencies: {} }
+[2026-05-12T19:10:34.132] [DEBUG] debug-file - session manager: set active socket. socketId=wpGO49grHo7N-aY0AAAB
+[2026-05-12T19:10:34.145] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
+[2026-05-12T19:10:34.147] [DEBUG] debug-file - Since there is no instance or instance is terminated, create a new worker pool.
+[2026-05-12T19:10:34.147] [DEBUG] debug-file - Worker pool is initialized with config:  {
+  minPoolNum: 2,
+  maxPoolNum: undefined,
+  maxCoreSize: undefined,
+  cacheCapacity: undefined,
+  cacheTtl: undefined
+}
+[2026-05-12T19:10:34.148] [DEBUG] debug-file - Create  resident worker with id: 0.
+[2026-05-12T19:10:34.149] [DEBUG] debug-file - Create  resident worker with id: 1.
+[2026-05-12T19:10:34.150] [DEBUG] debug-file - Workers' log level updated to INFO
+[2026-05-12T19:10:34.155] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: true,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' },
+  optimizationStrategy: 'memory',
+  hotCompile: undefined,
+  hotReloadBuild: undefined,
+  customizedParam: undefined
+}
+[2026-05-12T19:10:34.176] [DEBUG] debug-file - Cache service initialization finished in 21 ms 
+[2026-05-12T19:10:34.178] [DEBUG] debug-file - hvigorfile, resolving F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\hvigorfile.ts
+[2026-05-12T19:10:52.823] [DEBUG] debug-file - hvigorfile, require result:  { default: { plugins: [] } }
+[2026-05-12T19:10:52.824] [DEBUG] debug-file - hvigorfile, binding system plugins null
+[2026-05-12T19:10:52.824] [DEBUG] debug-file - Starting plugin build process
+[2026-05-12T19:10:52.824] [DEBUG] debug-file - App plugin prepare start...
+[2026-05-12T19:10:52.824] [DEBUG] debug-file - App plugin prepare end...
+[2026-05-12T19:10:52.824] [DEBUG] debug-file - App plugin creating...
+[2026-05-12T19:10:52.961] [DEBUG] debug-file - App plugin register hook start...
+[2026-05-12T19:10:52.962] [DEBUG] debug-file - App plugin register hook end...
+[2026-05-12T19:10:52.962] [DEBUG] debug-file - Plugin build process completed
+[2026-05-12T19:10:52.963] [DEBUG] debug-file - Start initialize project's product build option map with build mode debug.
+[2026-05-12T19:10:52.963] [DEBUG] debug-file - Picking option from product 'default' with build mode 'debug'.
+[2026-05-12T19:10:52.963] [DEBUG] debug-file - Product 'default' build option initialized
+[2026-05-12T19:10:52.963] [DEBUG] debug-file - End initialize project's product build option map with build mode 'debug'.
+[2026-05-12T19:10:52.965] [DEBUG] debug-file - Obtain build option for product 'default'in this build.
+[2026-05-12T19:10:52.967] [DEBUG] debug-file - No signingConfig found, initRemoteHspCache failed.
+[2026-05-12T19:10:52.976] [DEBUG] debug-file - Local scan or download HarmonyOS sdk components toolchains,ets,js,native,previewer
+[2026-05-12T19:10:52.980] [DEBUG] debug-file - Local scan or download hmscore sdk components toolchains,ets,native
+[2026-05-12T19:10:52.982] [DEBUG] debug-file - Start recording SDK configuration permission data.
+[2026-05-12T19:10:53.014] [DEBUG] debug-file - Sdk init in 39 ms 
+[2026-05-12T19:10:53.019] [DEBUG] debug-file - Project task initialization takes 4 ms 
+[2026-05-12T19:10:53.019] [DEBUG] debug-file - hvigorfile, binding custom plugins []
+[2026-05-12T19:10:53.019] [DEBUG] debug-file - hvigorfile, no custom plugins were found in F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\hvigorfile.ts
+[2026-05-12T19:10:53.019] [DEBUG] debug-file - hvigorfile, resolve finished F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\hvigorfile.ts
+[2026-05-12T19:10:53.020] [DEBUG] debug-file - hvigorfile, resolving F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\hvigorfile.ts
+[2026-05-12T19:10:53.025] [DEBUG] debug-file - hvigorfile, require result:  { default: { plugins: [] } }
+[2026-05-12T19:10:53.025] [DEBUG] debug-file - hvigorfile, binding system plugins null
+[2026-05-12T19:10:53.025] [DEBUG] debug-file - Starting plugin build process
+[2026-05-12T19:10:53.025] [DEBUG] debug-file - Hap plugin creating...
+[2026-05-12T19:10:53.026] [DEBUG] debug-file - failed to load cangjie to dynamically generate schemas: Error: Cannot find module '@ohos/cangjie-build-support/index'
+Require stack:
+- C:\Program Files\Huawei\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\hooks\cangjie-register.js
+- C:\Program Files\Huawei\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js
+- C:\Program Files\Huawei\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\builder\abstract-plugin-builder.js
+- C:\Program Files\Huawei\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\builder\app-plugin-builder.js
+- C:\Program Files\Huawei\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\factory\plugin-factory.js
+- C:\Program Files\Huawei\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\index.js
+- F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\hvigorfile.ts
+- C:\Program Files\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\internal\lifecycle\configuration.js
+- C:\Program Files\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\boot\index.js
+- C:\Program Files\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\cluster\worker-process-lifecycle.js
+- C:\Program Files\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\process\daemon-process-boot-script.js
+[2026-05-12T19:10:53.036] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=SampleCode_entry, buildMode=debug
+[2026-05-12T19:10:53.037] [DEBUG] debug-file - Target 'default' config initialized
+[2026-05-12T19:10:53.037] [DEBUG] debug-file - Module 'SampleCode_entry' target 'default' build option initialized
+[2026-05-12T19:10:53.037] [DEBUG] debug-file - End initialize module-target build option map, moduleName=SampleCode_entry
+[2026-05-12T19:10:53.037] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=SampleCode_entry, buildMode=release
+[2026-05-12T19:10:53.037] [DEBUG] debug-file - Target 'default' config initialized
+[2026-05-12T19:10:53.038] [DEBUG] debug-file - Module 'SampleCode_entry' target 'default' build option initialized
+[2026-05-12T19:10:53.038] [DEBUG] debug-file - End initialize module-target build option map, moduleName=SampleCode_entry
+[2026-05-12T19:10:53.038] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=SampleCode_entry, buildMode=debug
+[2026-05-12T19:10:53.038] [DEBUG] debug-file - Target 'default' config initialized
+[2026-05-12T19:10:53.038] [DEBUG] debug-file - Module 'SampleCode_entry' target 'default' build option initialized
+[2026-05-12T19:10:53.038] [DEBUG] debug-file - End initialize module-target build option map, moduleName=SampleCode_entry
+[2026-05-12T19:10:53.038] [DEBUG] debug-file - Obtain build option for module 'SampleCode_entry' target 'default'in this build.
+[2026-05-12T19:10:53.041] [DEBUG] debug-file - Module SampleCode_entry task initialization takes 3 ms 
+[2026-05-12T19:10:53.041] [DEBUG] debug-file - Hap plugin register hook start...
+[2026-05-12T19:10:53.041] [DEBUG] debug-file - Hap plugin register hook end...
+[2026-05-12T19:10:53.041] [DEBUG] debug-file - Plugin build process completed
+[2026-05-12T19:10:53.041] [DEBUG] debug-file - hvigorfile, binding custom plugins []
+[2026-05-12T19:10:53.042] [DEBUG] debug-file - hvigorfile, no custom plugins were found in F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\hvigorfile.ts
+[2026-05-12T19:10:53.042] [DEBUG] debug-file - hvigorfile, resolve finished F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\hvigorfile.ts
+[2026-05-12T19:10:53.092] [DEBUG] debug-file - hvigorfile, resolve hvigorfile dependencies in 50 ms 
+[2026-05-12T19:10:53.092] [DEBUG] debug-file - project has submodules:SampleCode_entry
+[2026-05-12T19:10:53.094] [DEBUG] debug-file - start to load updatedOhPackageInfo to the disk
+[2026-05-12T19:10:53.097] [DEBUG] debug-file - load to the disk finished
+[2026-05-12T19:10:53.099] [DEBUG] debug-file - Start to initialize dependency information.
+[2026-05-12T19:10:53.101] [DEBUG] debug-file - Module scankit-samplecode-clientdemo-arkts-master Collected Dependency: 
+[2026-05-12T19:10:53.101] [DEBUG] debug-file - Module scankit-samplecode-clientdemo-arkts-master's total dependency: 0
+[2026-05-12T19:10:53.102] [DEBUG] debug-file - Start to initialize dependency information.
+[2026-05-12T19:10:53.106] [DEBUG] debug-file - Module SampleCode_entry Collected Dependency: 
+[2026-05-12T19:10:53.106] [DEBUG] debug-file - Module SampleCode_entry's total dependency: 0
+[2026-05-12T19:10:53.109] [DEBUG] debug-file - Configuration phase cost:18 s 933 ms 
+[2026-05-12T19:10:53.116] [DEBUG] debug-file - Configuration task cost before running: 18 s 965 ms 
+[2026-05-12T19:10:53.120] [DEBUG] debug-file - Executing task :SampleCode_entry:default@PreBuild
+[2026-05-12T19:10:53.122] [DEBUG] debug-file - Task 'SampleCode_entry:default@PreBuild' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T19:10:53.131] [DEBUG] debug-file - SampleCode_entry:default@PreBuild is not up-to-date, since the input file 'F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\src\main\resources\base\profile\main_pages.json' has been changed.
+[2026-05-12T19:10:53.131] [DEBUG] debug-file - Incremental task SampleCode_entry:default@PreBuild pre-execution cost: 3 ms .
+[2026-05-12T19:10:53.274] [DEBUG] debug-file - current product is not Atomic service.
+[2026-05-12T19:10:53.274] [DEBUG] debug-file - Use tool [win32: JAVA_HOME, CLASSPATH]
+ [
+  { JAVA_HOME: 'C:\\Program Files\\Huawei\\DevEco Studio\\jbr' },
+  { CLASSPATH: undefined }
+]
+[2026-05-12T19:10:53.274] [DEBUG] debug-file - Use tool [win32: NODE_HOME]
+ [
+  {
+    NODE_HOME: 'C:\\Program Files\\Huawei\\DevEco Studio\\tools\\node'
+  }
+]
+[2026-05-12T19:10:53.275] [DEBUG] debug-file - SampleCode_entry : default@PreBuild cost memory 19.853050231933594
+[2026-05-12T19:10:53.275] [DEBUG] debug-file - runTaskFromQueue task cost before running: 19 s 124 ms 
+[2026-05-12T19:10:53.276] [INFO] debug-file - Finished :SampleCode_entry:default@PreBuild... after 155 ms 
+[2026-05-12T19:10:53.277] [DEBUG] debug-file - Executing task :SampleCode_entry:default@CreateModuleInfo
+[2026-05-12T19:10:53.277] [DEBUG] debug-file - Task 'SampleCode_entry:default@CreateModuleInfo' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T19:10:53.277] [DEBUG] debug-file - SampleCode_entry : default@CreateModuleInfo cost memory 0.04244232177734375
+[2026-05-12T19:10:53.277] [DEBUG] debug-file - runTaskFromQueue task cost before running: 19 s 127 ms 
+[2026-05-12T19:10:53.277] [INFO] debug-file - Finished :SampleCode_entry:default@CreateModuleInfo... after 1 ms 
+[2026-05-12T19:10:53.278] [DEBUG] debug-file - Executing task :SampleCode_entry:default@GenerateMetadata
+[2026-05-12T19:10:53.278] [DEBUG] debug-file - Task 'SampleCode_entry:default@GenerateMetadata' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T19:10:53.280] [DEBUG] debug-file - Incremental task SampleCode_entry:default@GenerateMetadata pre-execution cost: 1 ms .
+[2026-05-12T19:10:53.282] [DEBUG] debug-file - SampleCode_entry : default@GenerateMetadata cost memory 0.0570068359375
+[2026-05-12T19:10:53.282] [INFO] debug-file - UP-TO-DATE :SampleCode_entry:default@GenerateMetadata...  
+[2026-05-12T19:10:53.283] [DEBUG] debug-file - Executing task :SampleCode_entry:default@ConfigureCmake
+[2026-05-12T19:10:53.283] [DEBUG] debug-file - SampleCode_entry : default@ConfigureCmake cost memory 0.01470184326171875
+[2026-05-12T19:10:53.283] [DEBUG] debug-file - runTaskFromQueue task cost before running: 19 s 133 ms 
+[2026-05-12T19:10:53.283] [INFO] debug-file - Finished :SampleCode_entry:default@ConfigureCmake... after 1 ms 
+[2026-05-12T19:10:53.284] [DEBUG] debug-file - Executing task :SampleCode_entry:default@MergeProfile
+[2026-05-12T19:10:53.284] [DEBUG] debug-file - Task 'SampleCode_entry:default@MergeProfile' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T19:10:53.286] [DEBUG] debug-file - Incremental task SampleCode_entry:default@MergeProfile pre-execution cost: 1 ms .
+[2026-05-12T19:10:53.286] [DEBUG] debug-file - SampleCode_entry : default@MergeProfile cost memory 0.18775177001953125
+[2026-05-12T19:10:53.286] [INFO] debug-file - UP-TO-DATE :SampleCode_entry:default@MergeProfile...  
+[2026-05-12T19:10:53.287] [DEBUG] debug-file - Executing task :SampleCode_entry:default@CreateBuildProfile
+[2026-05-12T19:10:53.287] [DEBUG] debug-file - Task 'SampleCode_entry:default@CreateBuildProfile' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T19:10:53.288] [DEBUG] debug-file - Incremental task SampleCode_entry:default@CreateBuildProfile pre-execution cost: 1 ms .
+[2026-05-12T19:10:53.288] [DEBUG] debug-file - SampleCode_entry : default@CreateBuildProfile cost memory 0.09609222412109375
+[2026-05-12T19:10:53.288] [INFO] debug-file - UP-TO-DATE :SampleCode_entry:default@CreateBuildProfile...  
+[2026-05-12T19:10:53.289] [DEBUG] debug-file - Executing task :SampleCode_entry:default@PreCheckSyscap
+[2026-05-12T19:10:53.289] [DEBUG] debug-file - SampleCode_entry : default@PreCheckSyscap cost memory 0.0147552490234375
+[2026-05-12T19:10:53.289] [DEBUG] debug-file - runTaskFromQueue task cost before running: 19 s 138 ms 
+[2026-05-12T19:10:53.289] [INFO] debug-file - Finished :SampleCode_entry:default@PreCheckSyscap... after 1 ms 
+[2026-05-12T19:10:53.290] [DEBUG] debug-file - Executing task :SampleCode_entry:default@GeneratePkgContextInfo
+[2026-05-12T19:10:53.296] [DEBUG] debug-file - Task 'SampleCode_entry:default@GeneratePkgContextInfo' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T19:10:53.296] [DEBUG] debug-file - SampleCode_entry : default@GeneratePkgContextInfo cost memory 0.303558349609375
+[2026-05-12T19:10:53.296] [DEBUG] debug-file - runTaskFromQueue task cost before running: 19 s 146 ms 
+[2026-05-12T19:10:53.297] [INFO] debug-file - Finished :SampleCode_entry:default@GeneratePkgContextInfo... after 7 ms 
+[2026-05-12T19:10:53.299] [DEBUG] debug-file - Executing task :SampleCode_entry:default@ProcessIntegratedHsp
+[2026-05-12T19:10:53.299] [DEBUG] debug-file - SampleCode_entry:default@ProcessIntegratedHsp is not up-to-date, since the output file 'F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\build\cache\default\integrated_hsp\integratedHspCache.json' does not exist.
+[2026-05-12T19:10:53.299] [DEBUG] debug-file - Incremental task SampleCode_entry:default@ProcessIntegratedHsp pre-execution cost: 1 ms .
+[2026-05-12T19:10:53.299] [DEBUG] debug-file - SampleCode_entry : default@ProcessIntegratedHsp cost memory 0.058990478515625
+[2026-05-12T19:10:53.299] [DEBUG] debug-file - runTaskFromQueue task cost before running: 19 s 149 ms 
+[2026-05-12T19:10:53.299] [INFO] debug-file - Finished :SampleCode_entry:default@ProcessIntegratedHsp... after 1 ms 
+[2026-05-12T19:10:53.300] [DEBUG] debug-file - Executing task :SampleCode_entry:default@BuildNativeWithCmake
+[2026-05-12T19:10:53.300] [DEBUG] debug-file - SampleCode_entry : default@BuildNativeWithCmake cost memory 0.01490020751953125
+[2026-05-12T19:10:53.300] [DEBUG] debug-file - runTaskFromQueue task cost before running: 19 s 150 ms 
+[2026-05-12T19:10:53.300] [INFO] debug-file - Finished :SampleCode_entry:default@BuildNativeWithCmake... after 1 ms 
+[2026-05-12T19:10:53.301] [DEBUG] debug-file - Executing task :SampleCode_entry:default@MakePackInfo
+[2026-05-12T19:10:53.303] [DEBUG] debug-file - Incremental task SampleCode_entry:default@MakePackInfo pre-execution cost: 1 ms .
+[2026-05-12T19:10:53.303] [DEBUG] debug-file - SampleCode_entry : default@MakePackInfo cost memory 0.34680938720703125
+[2026-05-12T19:10:53.303] [INFO] debug-file - UP-TO-DATE :SampleCode_entry:default@MakePackInfo...  
+[2026-05-12T19:10:53.303] [DEBUG] debug-file - Executing task :SampleCode_entry:default@SyscapTransform
+[2026-05-12T19:10:53.304] [DEBUG] debug-file - File: 'F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\src\main\syscap.json' from 'sysCapJsonPath' is not exists, just ignore.
+[2026-05-12T19:10:53.304] [DEBUG] debug-file - Task 'SampleCode_entry:default@SyscapTransform' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T19:10:53.313] [DEBUG] debug-file - SampleCode_entry:default@SyscapTransform is not up-to-date, since the output file 'F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\syscap\default\rpcid.sc' does not exist.
+[2026-05-12T19:10:53.314] [DEBUG] debug-file - Incremental task SampleCode_entry:default@SyscapTransform pre-execution cost: 10 ms .
+[2026-05-12T19:10:53.314] [DEBUG] debug-file - SampleCode_entry : default@SyscapTransform cost memory 0.16036224365234375
+[2026-05-12T19:10:53.314] [DEBUG] debug-file - runTaskFromQueue task cost before running: 19 s 163 ms 
+[2026-05-12T19:10:53.314] [INFO] debug-file - Finished :SampleCode_entry:default@SyscapTransform... after 11 ms 
+[2026-05-12T19:10:53.316] [DEBUG] debug-file - Executing task :SampleCode_entry:default@ProcessProfile
+[2026-05-12T19:10:53.324] [DEBUG] debug-file - Task 'SampleCode_entry:default@ProcessProfile' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T19:10:53.325] [DEBUG] debug-file - Incremental task SampleCode_entry:default@ProcessProfile pre-execution cost: 1 ms .
+[2026-05-12T19:10:53.325] [DEBUG] debug-file - SampleCode_entry : default@ProcessProfile cost memory 0.14347076416015625
+[2026-05-12T19:10:53.325] [INFO] debug-file - UP-TO-DATE :SampleCode_entry:default@ProcessProfile...  
+[2026-05-12T19:10:53.326] [DEBUG] debug-file - Executing task :SampleCode_entry:default@ProcessRouterMap
+[2026-05-12T19:10:53.327] [DEBUG] debug-file - Incremental task SampleCode_entry:default@ProcessRouterMap pre-execution cost: 1 ms .
+[2026-05-12T19:10:53.328] [DEBUG] debug-file - SampleCode_entry : default@ProcessRouterMap cost memory 0.1370086669921875
+[2026-05-12T19:10:53.328] [INFO] debug-file - UP-TO-DATE :SampleCode_entry:default@ProcessRouterMap...  
+[2026-05-12T19:10:53.328] [DEBUG] debug-file - Executing task :SampleCode_entry:default@ProcessShareConfig
+[2026-05-12T19:10:53.329] [DEBUG] debug-file - Incremental task SampleCode_entry:default@ProcessShareConfig pre-execution cost: 1 ms .
+[2026-05-12T19:10:53.329] [DEBUG] debug-file - SampleCode_entry : default@ProcessShareConfig cost memory 0.1132965087890625
+[2026-05-12T19:10:53.330] [INFO] debug-file - UP-TO-DATE :SampleCode_entry:default@ProcessShareConfig...  
+[2026-05-12T19:10:53.330] [DEBUG] debug-file - Executing task :SampleCode_entry:default@ProcessStartupConfig
+[2026-05-12T19:10:53.330] [DEBUG] debug-file - Task 'SampleCode_entry:default@ProcessStartupConfig' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T19:10:53.331] [DEBUG] debug-file - SampleCode_entry:default@ProcessStartupConfig is not up-to-date, since the output file 'F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\startup\default\startup_config.json' does not exist.
+[2026-05-12T19:10:53.331] [DEBUG] debug-file - Incremental task SampleCode_entry:default@ProcessStartupConfig pre-execution cost: 1 ms .
+[2026-05-12T19:10:53.331] [DEBUG] debug-file - SampleCode_entry : default@ProcessStartupConfig cost memory 0.0980377197265625
+[2026-05-12T19:10:53.331] [DEBUG] debug-file - runTaskFromQueue task cost before running: 19 s 181 ms 
+[2026-05-12T19:10:53.331] [INFO] debug-file - Finished :SampleCode_entry:default@ProcessStartupConfig... after 2 ms 
+[2026-05-12T19:10:53.333] [DEBUG] debug-file - Executing task :SampleCode_entry:default@BuildNativeWithNinja
+[2026-05-12T19:10:53.334] [DEBUG] debug-file - SampleCode_entry : default@BuildNativeWithNinja cost memory 0.02193450927734375
+[2026-05-12T19:10:53.334] [DEBUG] debug-file - runTaskFromQueue task cost before running: 19 s 184 ms 
+[2026-05-12T19:10:53.334] [INFO] debug-file - Finished :SampleCode_entry:default@BuildNativeWithNinja... after 2 ms 
+[2026-05-12T19:10:53.336] [DEBUG] debug-file - restool module names: SampleCode_entry; moduleName=SampleCode_entry, taskName=default@ProcessResource
+[2026-05-12T19:10:53.342] [DEBUG] debug-file - Executing task :SampleCode_entry:default@ProcessResource
+[2026-05-12T19:10:53.343] [DEBUG] debug-file - Task 'SampleCode_entry:default@ProcessResource' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T19:10:53.343] [DEBUG] debug-file - Incremental task SampleCode_entry:default@ProcessResource pre-execution cost: 1 ms .
+[2026-05-12T19:10:53.343] [DEBUG] debug-file - SampleCode_entry : default@ProcessResource cost memory 0.13466644287109375
+[2026-05-12T19:10:53.344] [INFO] debug-file - UP-TO-DATE :SampleCode_entry:default@ProcessResource...  
+[2026-05-12T19:10:53.346] [DEBUG] debug-file - Executing task :SampleCode_entry:default@GenerateLoaderJson
+[2026-05-12T19:10:53.346] [DEBUG] debug-file - Task 'SampleCode_entry:default@GenerateLoaderJson' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T19:10:53.355] [DEBUG] debug-file - Incremental task SampleCode_entry:default@GenerateLoaderJson pre-execution cost: 2 ms .
+[2026-05-12T19:10:53.355] [DEBUG] debug-file - SampleCode_entry : default@GenerateLoaderJson cost memory 0.5495758056640625
+[2026-05-12T19:10:53.356] [INFO] debug-file - UP-TO-DATE :SampleCode_entry:default@GenerateLoaderJson...  
+[2026-05-12T19:10:53.357] [DEBUG] debug-file - Executing task :SampleCode_entry:default@ProcessLibs
+[2026-05-12T19:10:53.358] [DEBUG] debug-file - Incremental task SampleCode_entry:default@ProcessLibs pre-execution cost: 1 ms .
+[2026-05-12T19:10:53.358] [DEBUG] debug-file - SampleCode_entry : default@ProcessLibs cost memory 0.11426544189453125
+[2026-05-12T19:10:53.359] [INFO] debug-file - UP-TO-DATE :SampleCode_entry:default@ProcessLibs...  
+[2026-05-12T19:10:53.359] [DEBUG] debug-file - restool module names: SampleCode_entry; moduleName=SampleCode_entry, taskName=default@CompileResource
+[2026-05-12T19:10:53.360] [DEBUG] debug-file - Executing task :SampleCode_entry:default@CompileResource
+[2026-05-12T19:10:53.369] [DEBUG] debug-file - SampleCode_entry:default@CompileResource is not up-to-date, since the input file 'F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\src\main\resources' has been changed.
+[2026-05-12T19:10:53.369] [DEBUG] debug-file - Incremental task SampleCode_entry:default@CompileResource pre-execution cost: 3 ms .
+[2026-05-12T19:10:53.432] [DEBUG] debug-file - Use tool [C:\Program Files\Huawei\DevEco Studio\sdk\default\openharmony\toolchains\restool.exe]
+ [
+  'C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\toolchains\\restool.exe',
+  '-l',
+  'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\build\\default\\intermediates\\res\\default\\resConfig.json'
+]
+[2026-05-12T19:10:53.433] [DEBUG] debug-file - current process  memoryUsage: {
+  rss: 252436480,
+  heapTotal: 168325120,
+  heapUsed: 134212832,
+  external: 3424373,
+  arrayBuffers: 527821
+} os memoryUsage :14.313976287841797
+[2026-05-12T19:10:53.504] [DEBUG] debug-file - Info: Pack: normal pack mode
+
+[2026-05-12T19:10:53.660] [DEBUG] debug-file - Info: hardware concurrency count is : 20
+Info: thread count is : 20
+
+[2026-05-12T19:10:53.660] [DEBUG] debug-file - Info: thread pool is started
+
+[2026-05-12T19:10:53.669] [DEBUG] debug-file - Info: GenericCompiler::CompileFiles
+
+[2026-05-12T19:10:53.670] [DEBUG] debug-file - Info: GenericCompiler::CompileFiles
+
+[2026-05-12T19:10:53.682] [DEBUG] debug-file - Info: GenericCompiler::CompileFiles
+
+[2026-05-12T19:10:53.684] [DEBUG] debug-file - Info: GenericCompiler::CompileFiles
+
+[2026-05-12T19:10:53.689] [DEBUG] debug-file - 05-12 19:10:53.689 32728  4364 E C01400/ImageTranscoderUtils: DecodeToRGBA IN
+05-12 19:10:53.689 32728  4364 E C01400/ImageTranscoderUtils: ImageFilter IN F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\AppScope\resources\base\media\app_icon.png
+
+[2026-05-12T19:10:53.700] [DEBUG] debug-file - 05-12 19:10:53.700 32728  4364 E C01400/ImageTranscoder: TranscodeSLR Only zoom-out is supported.
+
+[2026-05-12T19:10:53.700] [DEBUG] debug-file - Warning: ScaleImage failed, error message: INVALID_PARAMETERS, file path = F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\AppScope\resources\base\media\app_icon.png
+
+[2026-05-12T19:10:53.701] [DEBUG] debug-file - 05-12 19:10:53.701 32728  4364 E C01400/ImageTranscoderUtils: DecodeToRGBA IN
+05-12 19:10:53.702 32728  4364 E C01400/ImageTranscoderUtils: ImageFilter IN F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\src\main\resources\base\media\icon.png
+
+[2026-05-12T19:10:53.702] [DEBUG] debug-file - 05-12 19:10:53.702 32728  4364 E C01400/ImageTranscoder: TranscodeSLR Only zoom-out is supported.
+
+[2026-05-12T19:10:53.702] [DEBUG] debug-file - Warning: ScaleImage failed, error message: INVALID_PARAMETERS, file path = F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\src\main\resources\base\media\icon.png
+
+[2026-05-12T19:10:53.705] [DEBUG] debug-file - Warning: The width or height of the png file referenced by the icon exceeds the limit (41 pixels)
+at F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\AppScope\resources\base\media\app_icon.png
+
+[2026-05-12T19:10:53.705] [DEBUG] debug-file - Warning: The width or height of the png file referenced by the icon exceeds the limit (41 pixels)
+at F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\src\main\resources\base\media\icon.png
+
+[2026-05-12T19:10:53.706] [DEBUG] debug-file - Info: restool resources compile success.
+
+[2026-05-12T19:10:53.706] [DEBUG] debug-file - Info: thread pool is stopped
+
+[2026-05-12T19:10:53.772] [DEBUG] debug-file - SampleCode_entry : default@CompileResource cost memory -14.007965087890625
+[2026-05-12T19:10:53.772] [DEBUG] debug-file - runTaskFromQueue task cost before running: 19 s 622 ms 
+[2026-05-12T19:10:53.773] [INFO] debug-file - Finished :SampleCode_entry:default@CompileResource... after 413 ms 
+[2026-05-12T19:10:53.774] [DEBUG] debug-file - Executing task :SampleCode_entry:default@DoNativeStrip
+[2026-05-12T19:10:53.774] [DEBUG] debug-file - Task 'SampleCode_entry:default@DoNativeStrip' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T19:10:53.775] [DEBUG] debug-file - Incremental task SampleCode_entry:default@DoNativeStrip pre-execution cost: 1 ms .
+[2026-05-12T19:10:53.775] [DEBUG] debug-file - SampleCode_entry : default@DoNativeStrip cost memory 0.07895660400390625
+[2026-05-12T19:10:53.775] [INFO] debug-file - UP-TO-DATE :SampleCode_entry:default@DoNativeStrip...  
+[2026-05-12T19:10:53.776] [DEBUG] debug-file - Executing task :SampleCode_entry:default@CompileArkTS
+[2026-05-12T19:10:53.776] [DEBUG] debug-file - obfuscationOptions: undefined
+[2026-05-12T19:10:53.777] [DEBUG] debug-file - Task 'SampleCode_entry:default@CompileArkTS' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T19:10:53.779] [DEBUG] debug-file - SampleCode_entry:default@CompileArkTS is not up-to-date, since the input file 'F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\res\default\ResourceTable.txt' has been changed.
+[2026-05-12T19:10:53.779] [DEBUG] debug-file - Incremental task SampleCode_entry:default@CompileArkTS pre-execution cost: 2 ms .
+[2026-05-12T19:10:53.793] [DEBUG] debug-file - build config:
+[2026-05-12T19:10:53.794] [DEBUG] debug-file - {
+  moduleType: 'entry',
+  perf: 0,
+  targetName: '.default',
+  packageManagerType: 'ohpm',
+  localPropertiesPath: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\local.properties',
+  isPreview: false,
+  isOhosTest: false,
+  isLocalTest: false,
+  buildMode: 'Debug',
+  hotReloadBuild: undefined,
+  watchMode: 'false',
+  aceProfilePath: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\build\\default\\intermediates\\res\\default\\resources\\base\\profile',
+  etsLoaderPath: 'C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader',
+  modulePath: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry',
+  testFrameworkPar: {
+    testMode: undefined,
+    coveragePathFilter: undefined,
+    coverageMode: undefined
+  },
+  needCoverageInsert: false,
+  debugLine: false,
+  projectTopDir: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master',
+  compileSdkVersion: 22,
+  compatibleSdkVersion: 22,
+  originCompatibleSdkVersion: '6.0.2(22)',
+  compatibleSdkVersionStage: undefined,
+  bundleName: 'c***e',
+  etsLoaderVersion: '6.0.2.130',
+  etsLoaderReleaseType: 'Release',
+  aotCompileMode: 'type',
+  apPath: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\modules.ap',
+  entryModuleName: 'SampleCode_entry',
+  entryModuleVersion: '1.0.0',
+  entryPackageName: 'entry',
+  allModuleNameHash: 'f07ada1035fada2b4bca26d834981a227cb3fabe270bdfcc8b523270b24ac296',
+  externalApiPaths: [
+    'C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\hms\\ets'
+  ],
+  compilerTypes: [],
+  isCrossplatform: false,
+  hvigorPluginFile: undefined,
+  compilePluginPath: undefined,
+  buildGeneratedProfilePath: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\build\\default\\generated\\profile\\default',
+  bundleType: 'app',
+  arkTSVersion: undefined,
+  apiVersion: 22,
+  needCompleteSourcesMap: false,
+  isFaMode: false,
+  buildDir: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\build',
+  deviceTypes: [ 'phone', 'tablet' ],
+  pkgContextInfo: undefined,
+  ohPackagePathMap: {},
+  dependencyAliasMap: {},
+  permission: {
+    requestPermissions: [ [Object], [Object] ],
+    definePermissions: undefined
+  },
+  useGetCurrentBundleName: false,
+  projectArkOption: undefined,
+  sourceMapDir: undefined,
+  branchElimination: false,
+  transformLib: undefined,
+  tsImportSendable: false,
+  resolveConflictMode: true,
+  depName2RootPath: {},
+  depName2DepInfo: {},
+  rootPathSet: [ 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master' ],
+  useNativeResolver: true,
+  shouldEmitJs: true,
+  useTscResolve: false,
+  singleFileEmit: false,
+  userProjectConfig: {
+    autoLazyImport: false,
+    allowEmptyBundleName: false,
+    reExportCheckMode: 'noCheck',
+    executionMode: 'memory',
+    usePathPlaceholder: false,
+    writeRollupCache: true,
+    isExpandImportEnabled: false,
+    expandImportExclude: '',
+    lazyImportExclude: '',
+    lazyImportInclude: '',
+    ignoreCrossplatformCheck: false,
+    isHarDeduplicateEnabled: false,
+    skipOhModulesLint: false,
+    enableStrictCheckOHModule: false,
+    disableSendableCheckRules: [],
+    useDeclarationFileSignature: false,
+    customizedOptions: undefined,
+    integratedHsp: false,
+    isPreloadSoEnabled: false
+  },
+  executionMode: 'memory',
+  arkCompileCachePath: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\build\\default\\cache\\default\\default@CompileArkTS\\esmodule',
+  autoLazyFilter: undefined,
+  isHarDeduplicateEnabled: false,
+  intermediateHarDuplicateDirPath: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\build\\default\\intermediates\\har_duplicate\\default',
+  autoLazyImport: false,
+  allowEmptyBundleName: false,
+  reExportCheckMode: 'noCheck',
+  usePathPlaceholder: false,
+  writeRollupCache: true,
+  isExpandImportEnabled: false,
+  expandImportExclude: '',
+  lazyImportExclude: '',
+  lazyImportInclude: '',
+  ignoreCrossplatformCheck: false,
+  skipOhModulesLint: false,
+  enableStrictCheckOHModule: false,
+  disableSendableCheckRules: [],
+  useDeclarationFileSignature: false,
+  customizedOptions: undefined,
+  integratedHsp: false,
+  isPreloadSoEnabled: false,
+  strictMode: undefined,
+  useNormalizedOHMUrl: false,
+  caseSensitiveCheck: false,
+  aceModuleJsonPath: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\build\\default\\intermediates\\res\\default\\ark_module.json',
+  appResource: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\build\\default\\intermediates\\res\\default\\ResourceTable.txt',
+  rawFileResource: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\build\\default\\intermediates\\res\\default\\resources\\rawfile',
+  resourceTableHash: 'a8b77b0d26a12936dbb60c5e8b629b9e2639b7639abec6abde19cb3c1534fe63',
+  runtimeOS: 'HarmonyOS',
+  sdkInfo: 'false:22:6.0.2.130:Release',
+  aceModuleRoot: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\ets',
+  compileMode: 'esmodule',
+  aceSuperVisualPath: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main\\supervisual',
+  aceBuildJson: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\build\\default\\intermediates\\loader\\default\\loader.json',
+  cachePath: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\build\\default\\cache\\default\\default@CompileArkTS\\esmodule\\debug',
+  aceModuleBuild: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\build\\default\\intermediates\\loader_out\\default\\ets',
+  supportChunks: true,
+  declaredFilesPath: undefined,
+  shouldCollectDirectImportees: false,
+  isByteCodeHarOptimize: false,
+  expandImportPath: undefined,
+  pkgNameToPkgBriefInfo: {
+    entry: {
+      pkgRoot: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry',
+      originalSourceRoots: undefined,
+      sourceRoots: [Array],
+      pkgName: 'entry'
+    }
+  },
+  projectModel: {
+    'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\src\\main': {
+      moduleName: 'SampleCode_entry',
+      modulePkgPath: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry',
+      belongProjectPath: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master'
+    },
+    'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry': {
+      moduleName: 'SampleCode_entry',
+      modulePkgPath: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry',
+      belongProjectPath: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master'
+    },
+    'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master': {
+      moduleName: 'scankit-samplecode-clientdemo-arkts-master',
+      modulePkgPath: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master',
+      belongProjectPath: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master'
+    }
+  },
+  pkgJsonFileHash: '0f6ed72aacc5edd8601644186f9531f9bd59d510947fa27606bbbe227f8c0940',
+  allModulePaths: [ 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry' ],
+  routerMap: {},
+  obfuscationOptions: undefined,
+  byteCodeHarToDependencyKeys: undefined,
+  compileBlockPkg: [],
+  mockParams: {
+    decorator: '@MockSetup',
+    packageName: '@ohos/hamock',
+    etsSourceRootPath: 'src/main/ets',
+    mockConfigPath: undefined,
+    mockConfigKey2ModuleInfo: {},
+    source2ModuleIdMap: {}
+  },
+  copyCodeResourceEnable: true,
+  copyCodeResourceExcludes: [],
+  copyCodeResourceIncludes: undefined,
+  uiTransformOptimization: false,
+  sdkPath: 'C:/Program Files/Huawei/DevEco Studio/sdk',
+  needPreloadSoFileSet: {},
+  preloadSoFilePath: 'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\build\\default\\intermediates\\preload\\default\\preload.json',
+  useSourceHash: false,
+  localModuleParamMap: {},
+  otherPaths: {
+    'entry/*': [
+      '..\\*',
+      '..\\..\\..\\build\\default\\generated\\profile\\default\\*'
+    ]
+  },
+  collectImportersConfig: undefined
+}
+[2026-05-12T19:10:53.794] [DEBUG] debug-file - Compile arkts with external api path: C:\Program Files\Huawei\DevEco Studio\sdk\default\hms\ets
+[2026-05-12T19:10:53.795] [DEBUG] debug-file - default@CompileArkTS work[0] is submitted.
+[2026-05-12T19:10:53.795] [DEBUG] debug-file - default@CompileArkTS work[0] is pushed to ready queue.
+[2026-05-12T19:10:53.795] [DEBUG] debug-file - A work dispatched to worker[19] failed because unable to get work from ready queue.
+[2026-05-12T19:10:53.795] [DEBUG] debug-file - A work dispatched to worker[18] failed because unable to get work from ready queue.
+[2026-05-12T19:10:53.795] [DEBUG] debug-file - A work dispatched to worker[17] failed because unable to get work from ready queue.
+[2026-05-12T19:10:53.795] [DEBUG] debug-file - A work dispatched to worker[16] failed because unable to get work from ready queue.
+[2026-05-12T19:10:53.795] [DEBUG] debug-file - A work dispatched to worker[15] failed because unable to get work from ready queue.
+[2026-05-12T19:10:53.795] [DEBUG] debug-file - A work dispatched to worker[14] failed because unable to get work from ready queue.
+[2026-05-12T19:10:53.795] [DEBUG] debug-file - A work dispatched to worker[13] failed because unable to get work from ready queue.
+[2026-05-12T19:10:53.795] [DEBUG] debug-file - A work dispatched to worker[12] failed because unable to get work from ready queue.
+[2026-05-12T19:10:53.795] [DEBUG] debug-file - A work dispatched to worker[11] failed because unable to get work from ready queue.
+[2026-05-12T19:10:53.795] [DEBUG] debug-file - A work dispatched to worker[10] failed because unable to get work from ready queue.
+[2026-05-12T19:10:53.795] [DEBUG] debug-file - A work dispatched to worker[9] failed because unable to get work from ready queue.
+[2026-05-12T19:10:53.795] [DEBUG] debug-file - A work dispatched to worker[8] failed because unable to get work from ready queue.
+[2026-05-12T19:10:53.795] [DEBUG] debug-file - A work dispatched to worker[7] failed because unable to get work from ready queue.
+[2026-05-12T19:10:53.796] [DEBUG] debug-file - A work dispatched to worker[6] failed because unable to get work from ready queue.
+[2026-05-12T19:10:53.796] [DEBUG] debug-file - A work dispatched to worker[5] failed because unable to get work from ready queue.
+[2026-05-12T19:10:53.796] [DEBUG] debug-file - Create  resident worker with id: 4.
+[2026-05-12T19:10:53.797] [DEBUG] debug-file - default@CompileArkTS work[0] has been dispatched to worker[4].
+[2026-05-12T19:10:53.797] [DEBUG] debug-file - default@CompileArkTS work[0] is dispatched.
+[2026-05-12T19:10:53.797] [DEBUG] debug-file - CopyResources startTime: 487448762622400
+[2026-05-12T19:10:53.797] [DEBUG] debug-file - default@CompileArkTS work[1] is submitted.
+[2026-05-12T19:10:53.797] [DEBUG] debug-file - default@CompileArkTS work[1] is pushed to ready queue.
+[2026-05-12T19:10:53.797] [DEBUG] debug-file - A work dispatched to worker[19] failed because unable to get work from ready queue.
+[2026-05-12T19:10:53.797] [DEBUG] debug-file - Create  resident worker with id: 18.
+[2026-05-12T19:10:53.798] [DEBUG] debug-file - default@CompileArkTS work[1] has been dispatched to worker[18].
+[2026-05-12T19:10:53.798] [DEBUG] debug-file - default@CompileArkTS work[1] is dispatched.
+[2026-05-12T19:10:53.798] [DEBUG] debug-file - SampleCode_entry : default@CompileArkTS cost memory 1.595245361328125
+[2026-05-12T19:10:53.799] [DEBUG] debug-file - Executing task :SampleCode_entry:default@BuildJS
+[2026-05-12T19:10:53.799] [DEBUG] debug-file - Task 'SampleCode_entry:default@BuildJS' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T19:10:53.800] [DEBUG] debug-file - SampleCode_entry : default@BuildJS cost memory 0.1448516845703125
+[2026-05-12T19:10:53.800] [DEBUG] debug-file - runTaskFromQueue task cost before running: 19 s 650 ms 
+[2026-05-12T19:10:53.800] [INFO] debug-file - Finished :SampleCode_entry:default@BuildJS... after 2 ms 
+[2026-05-12T19:10:53.801] [DEBUG] debug-file - Executing task :SampleCode_entry:default@CacheNativeLibs
+[2026-05-12T19:10:53.801] [DEBUG] debug-file - Task 'SampleCode_entry:default@CacheNativeLibs' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T19:10:53.802] [DEBUG] debug-file - Incremental task SampleCode_entry:default@CacheNativeLibs pre-execution cost: 1 ms .
+[2026-05-12T19:10:53.802] [DEBUG] debug-file - SampleCode_entry : default@CacheNativeLibs cost memory 0.3231353759765625
+[2026-05-12T19:10:53.802] [INFO] debug-file - UP-TO-DATE :SampleCode_entry:default@CacheNativeLibs...  
+[2026-05-12T19:10:54.404] [DEBUG] debug-file - worker[18] has one work done.
+[2026-05-12T19:10:54.404] [DEBUG] debug-file - CopyResources is end, endTime: 487449369700300
+[2026-05-12T19:10:54.404] [DEBUG] debug-file - default@CompileArkTS work[1] done.
+[2026-05-12T19:10:54.404] [DEBUG] debug-file - A work dispatched to worker[18] failed because unable to get work from ready queue.
+[2026-05-12T19:11:12.152] [WARN] debug-file - [33mWARN: [33m[33mArkTS:WARN File: F:/kaiyuan/scankit-samplecode-clientdemo-arkts-master/entry/src/main/ets/pages/resultPage/ResultPage.ets:64:23
+ 'getContext' has been deprecated.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: F:/kaiyuan/scankit-samplecode-clientdemo-arkts-master/entry/src/main/ets/pages/scanHistory/ScanHistory.ets:13:23
+ 'getContext' has been deprecated.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: F:/kaiyuan/scankit-samplecode-clientdemo-arkts-master/entry/src/main/ets/pages/scanHistory/ScanHistory.ets:29:33
+ 'back' has been deprecated.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: F:/kaiyuan/scankit-samplecode-clientdemo-arkts-master/entry/src/main/ets/pages/scanHistory/ScanHistory.ets:46:31
+ 'getContext' has been deprecated.
+[39m[39m
+
+[2026-05-12T19:11:12.152] [DEBUG] debug-file - Ark compile task finished.finished time is 487467117957200
+[2026-05-12T19:11:12.153] [DEBUG] debug-file - worker[4] has one work done.
+[2026-05-12T19:11:12.154] [DEBUG] debug-file - default@CompileArkTS work[0] done.
+[2026-05-12T19:11:12.154] [DEBUG] debug-file - A work dispatched to worker[4] failed because unable to get work from ready queue.
+[2026-05-12T19:11:12.155] [INFO] debug-file - Finished :SampleCode_entry:default@CompileArkTS... after 16 s 982 ms 
+[2026-05-12T19:11:12.156] [DEBUG] debug-file - Executing task :SampleCode_entry:default@GeneratePkgModuleJson
+[2026-05-12T19:11:12.156] [DEBUG] debug-file - File: 'F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\preload\default\preload.json' from 'preloadSoJsonPath' is not exists, just ignore.
+[2026-05-12T19:11:12.157] [DEBUG] debug-file - Error occurs while handling @Input 'shouldDeduplicateHar': The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+[2026-05-12T19:11:12.157] [DEBUG] debug-file - Task 'SampleCode_entry:default@GeneratePkgModuleJson' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T19:11:12.157] [DEBUG] debug-file - SampleCode_entry:default@GeneratePkgModuleJson is not up-to-date, since the input file 'F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\res\default\module.json' has been changed.
+[2026-05-12T19:11:12.157] [DEBUG] debug-file - Incremental task SampleCode_entry:default@GeneratePkgModuleJson pre-execution cost: 1 ms .
+[2026-05-12T19:11:12.158] [DEBUG] debug-file - SampleCode_entry : default@GeneratePkgModuleJson cost memory 0.22660064697265625
+[2026-05-12T19:11:12.158] [DEBUG] debug-file - runTaskFromQueue task cost before running: 38 s 8 ms 
+[2026-05-12T19:11:12.158] [INFO] debug-file - Finished :SampleCode_entry:default@GeneratePkgModuleJson... after 3 ms 
+[2026-05-12T19:11:12.159] [DEBUG] debug-file - Executing task :SampleCode_entry:default@ProcessCompiledResources
+[2026-05-12T19:11:12.159] [DEBUG] debug-file - File: 'F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\preload\default\preload.json' from 'preloadSoJsonPath' is not exists, just ignore.
+[2026-05-12T19:11:12.159] [DEBUG] debug-file - Task 'SampleCode_entry:default@ProcessCompiledResources' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T19:11:12.159] [DEBUG] debug-file - SampleCode_entry : default@ProcessCompiledResources cost memory 0.05884552001953125
+[2026-05-12T19:11:12.159] [DEBUG] debug-file - runTaskFromQueue task cost before running: 38 s 9 ms 
+[2026-05-12T19:11:12.159] [INFO] debug-file - Finished :SampleCode_entry:default@ProcessCompiledResources... after 1 ms 
+[2026-05-12T19:11:12.161] [DEBUG] debug-file - Executing task :SampleCode_entry:default@PackageHap
+[2026-05-12T19:11:12.163] [DEBUG] debug-file - SampleCode_entry:default@PackageHap is not up-to-date, since the input file 'F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\res\default\module.json' has been changed.
+[2026-05-12T19:11:12.163] [DEBUG] debug-file - Incremental task SampleCode_entry:default@PackageHap pre-execution cost: 2 ms .
+[2026-05-12T19:11:12.164] [DEBUG] debug-file - Use tool [C:\Program Files\Huawei\DevEco Studio\sdk\default\openharmony\toolchains\lib\app_packing_tool.jar]
+ [
+  'java',
+  '-Dfile.encoding=GBK',
+  '-jar',
+  'C:\\Program Files\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\toolchains\\lib\\app_packing_tool.jar',
+  '--mode',
+  'hap',
+  '--force',
+  'true',
+  '--lib-path',
+  'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\build\\default\\intermediates\\stripped_native_libs\\default',
+  '--json-path',
+  'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\build\\default\\intermediates\\package\\default\\module.json',
+  '--resources-path',
+  'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\build\\default\\intermediates\\res\\default\\resources',
+  '--index-path',
+  'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\build\\default\\intermediates\\res\\default\\resources.index',
+  '--pack-info-path',
+  'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\build\\default\\outputs\\default\\pack.info',
+  '--out-path',
+  'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\build\\default\\outputs\\default\\SampleCode_entry-default-unsigned.hap',
+  '--ets-path',
+  'F:\\kaiyuan\\scankit-samplecode-clientdemo-arkts-master\\entry\\build\\default\\intermediates\\loader_out\\default\\ets'
+]
+[2026-05-12T19:11:12.480] [DEBUG] debug-file - java daemon socket received message:{"code":0,"message":"pack success"}
+[2026-05-12T19:11:12.484] [DEBUG] debug-file - SampleCode_entry : default@PackageHap cost memory -0.03693389892578125
+[2026-05-12T19:11:12.484] [DEBUG] debug-file - runTaskFromQueue task cost before running: 38 s 333 ms 
+[2026-05-12T19:11:12.485] [INFO] debug-file - Finished :SampleCode_entry:default@PackageHap... after 323 ms 
+[2026-05-12T19:11:12.486] [DEBUG] debug-file - Executing task :SampleCode_entry:default@PackingCheck
+[2026-05-12T19:11:12.491] [DEBUG] debug-file - SampleCode_entry : default@PackingCheck cost memory -0.26465606689453125
+[2026-05-12T19:11:12.491] [DEBUG] debug-file - runTaskFromQueue task cost before running: 38 s 341 ms 
+[2026-05-12T19:11:12.491] [INFO] debug-file - Finished :SampleCode_entry:default@PackingCheck... after 6 ms 
+[2026-05-12T19:11:12.493] [DEBUG] debug-file - Executing task :SampleCode_entry:default@SignHap
+[2026-05-12T19:11:12.493] [WARN] debug-file - Will skip sign 'hos_hap'. No signingConfigs profile is configured in current project.
+             If needed, configure the signingConfigs in F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\build-profile.json5.
+[2026-05-12T19:11:12.493] [DEBUG] debug-file - SampleCode_entry:default@SignHap is not up-to-date, since the input file 'F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\outputs\default\SampleCode_entry-default-unsigned.hap' has been changed.
+[2026-05-12T19:11:12.493] [DEBUG] debug-file - Incremental task SampleCode_entry:default@SignHap pre-execution cost: 1 ms .
+[2026-05-12T19:11:12.494] [DEBUG] debug-file - SampleCode_entry : default@SignHap cost memory 0.09725189208984375
+[2026-05-12T19:11:12.494] [DEBUG] debug-file - runTaskFromQueue task cost before running: 38 s 343 ms 
+[2026-05-12T19:11:12.494] [INFO] debug-file - Finished :SampleCode_entry:default@SignHap... after 2 ms 
+[2026-05-12T19:11:12.495] [DEBUG] debug-file - Executing task :SampleCode_entry:default@CollectDebugSymbol
+[2026-05-12T19:11:12.495] [DEBUG] debug-file - SampleCode_entry : default@CollectDebugSymbol cost memory 0.09499359130859375
+[2026-05-12T19:11:12.495] [DEBUG] debug-file - runTaskFromQueue task cost before running: 38 s 345 ms 
+[2026-05-12T19:11:12.496] [INFO] debug-file - Finished :SampleCode_entry:default@CollectDebugSymbol... after 1 ms 
+[2026-05-12T19:11:12.496] [DEBUG] debug-file - Executing task :SampleCode_entry:assembleHap
+[2026-05-12T19:11:12.496] [DEBUG] debug-file - SampleCode_entry : assembleHap cost memory 0.0128631591796875
+[2026-05-12T19:11:12.496] [DEBUG] debug-file - runTaskFromQueue task cost before running: 38 s 345 ms 
+[2026-05-12T19:11:12.496] [INFO] debug-file - Finished :SampleCode_entry:assembleHap... after 1 ms 
+[2026-05-12T19:11:12.507] [INFO] debug-file - BUILD SUCCESSFUL in 38 s 356 ms 
+[2026-05-12T19:11:12.507] [DEBUG] debug-file - Update task SampleCode_entry:default@PreBuild input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\AppScope\app.json5 cache by regenerate.
+[2026-05-12T19:11:12.508] [DEBUG] debug-file - Update task SampleCode_entry:default@PreBuild input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\src\main\module.json5 cache by regenerate.
+[2026-05-12T19:11:12.508] [DEBUG] debug-file - Update task SampleCode_entry:default@PreBuild input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\build-profile.json5 cache by regenerate.
+[2026-05-12T19:11:12.508] [DEBUG] debug-file - Update task SampleCode_entry:default@PreBuild input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build-profile.json5 cache by regenerate.
+[2026-05-12T19:11:12.508] [DEBUG] debug-file - Update task SampleCode_entry:default@PreBuild input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\src\main\resources\base\profile\main_pages.json cache from map.
+[2026-05-12T19:11:12.508] [DEBUG] debug-file - Update task SampleCode_entry:default@PreBuild input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\hvigor\hvigor-config.json5 cache by regenerate.
+[2026-05-12T19:11:12.508] [DEBUG] debug-file - Update task SampleCode_entry:default@PreBuild input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\oh-package.json5 cache by regenerate.
+[2026-05-12T19:11:12.508] [DEBUG] debug-file - Update task SampleCode_entry:default@PreBuild input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\oh-package.json5 cache by regenerate.
+[2026-05-12T19:11:12.508] [DEBUG] debug-file - Incremental task SampleCode_entry:default@PreBuild post-execution cost:2 ms .
+[2026-05-12T19:11:12.509] [DEBUG] debug-file - Update task SampleCode_entry:default@CreateModuleInfo output file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\generated\profile\default\ModuleInfo.ts cache.
+[2026-05-12T19:11:12.509] [DEBUG] debug-file - Incremental task SampleCode_entry:default@CreateModuleInfo post-execution cost:1 ms .
+[2026-05-12T19:11:12.509] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task SampleCode_entry:default@GenerateMetadata is up-to-date.
+[2026-05-12T19:11:12.509] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task SampleCode_entry:default@MergeProfile is up-to-date.
+[2026-05-12T19:11:12.509] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task SampleCode_entry:default@CreateBuildProfile is up-to-date.
+[2026-05-12T19:11:12.509] [DEBUG] debug-file - Update task SampleCode_entry:default@GeneratePkgContextInfo output file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\loader\default\pkgContextInfo.json cache.
+[2026-05-12T19:11:12.510] [DEBUG] debug-file - Incremental task SampleCode_entry:default@GeneratePkgContextInfo post-execution cost:1 ms .
+[2026-05-12T19:11:12.510] [DEBUG] debug-file - Update task SampleCode_entry:default@ProcessIntegratedHsp output file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\build\cache\default\integrated_hsp\integratedHspCache.json cache.
+[2026-05-12T19:11:12.510] [DEBUG] debug-file - Incremental task SampleCode_entry:default@ProcessIntegratedHsp post-execution cost:1 ms .
+[2026-05-12T19:11:12.510] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task SampleCode_entry:default@MakePackInfo is up-to-date.
+[2026-05-12T19:11:12.510] [DEBUG] debug-file - Update task SampleCode_entry:default@SyscapTransform input file:C:\Program Files\Huawei\DevEco Studio\sdk\default\openharmony\toolchains\syscap_tool.exe cache by regenerate.
+[2026-05-12T19:11:12.510] [DEBUG] debug-file - Update task SampleCode_entry:default@SyscapTransform input file:C:\Program Files\Huawei\DevEco Studio\sdk\default\openharmony\ets\api\device-define cache by regenerate.
+[2026-05-12T19:11:12.510] [DEBUG] debug-file - Update task SampleCode_entry:default@SyscapTransform output file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\syscap\default\rpcid.sc cache.
+[2026-05-12T19:11:12.511] [DEBUG] debug-file - Incremental task SampleCode_entry:default@SyscapTransform post-execution cost:1 ms .
+[2026-05-12T19:11:12.511] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task SampleCode_entry:default@ProcessProfile is up-to-date.
+[2026-05-12T19:11:12.511] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task SampleCode_entry:default@ProcessRouterMap is up-to-date.
+[2026-05-12T19:11:12.511] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task SampleCode_entry:default@ProcessShareConfig is up-to-date.
+[2026-05-12T19:11:12.511] [DEBUG] debug-file - Update task SampleCode_entry:default@ProcessStartupConfig output file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\startup\default\startup_config.json cache.
+[2026-05-12T19:11:12.511] [DEBUG] debug-file - Incremental task SampleCode_entry:default@ProcessStartupConfig post-execution cost:1 ms .
+[2026-05-12T19:11:12.511] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task SampleCode_entry:default@ProcessResource is up-to-date.
+[2026-05-12T19:11:12.511] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task SampleCode_entry:default@GenerateLoaderJson is up-to-date.
+[2026-05-12T19:11:12.511] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task SampleCode_entry:default@ProcessLibs is up-to-date.
+[2026-05-12T19:11:12.512] [DEBUG] debug-file - Update task SampleCode_entry:default@CompileResource input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\src\main\resources cache from map.
+[2026-05-12T19:11:12.512] [DEBUG] debug-file - Update task SampleCode_entry:default@CompileResource input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\AppScope\resources cache by regenerate.
+[2026-05-12T19:11:12.512] [DEBUG] debug-file - Update task SampleCode_entry:default@CompileResource input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\process_profile\default\module.json cache by regenerate.
+[2026-05-12T19:11:12.512] [DEBUG] debug-file - Update task SampleCode_entry:default@CompileResource input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\res\default\resConfig.json cache by regenerate.
+[2026-05-12T19:11:12.512] [DEBUG] debug-file - Update task SampleCode_entry:default@CompileResource output file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\res\default cache.
+[2026-05-12T19:11:12.514] [DEBUG] debug-file - Update task SampleCode_entry:default@CompileResource output file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\generated\r\default\ResourceTable.h cache.
+[2026-05-12T19:11:12.514] [DEBUG] debug-file - Update task SampleCode_entry:default@CompileResource output file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\generated\r\default cache.
+[2026-05-12T19:11:12.514] [DEBUG] debug-file - Incremental task SampleCode_entry:default@CompileResource post-execution cost:3 ms .
+[2026-05-12T19:11:12.514] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task SampleCode_entry:default@DoNativeStrip is up-to-date.
+[2026-05-12T19:11:12.515] [DEBUG] debug-file - Update task SampleCode_entry:default@CompileArkTS input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\loader\default cache by regenerate.
+[2026-05-12T19:11:12.515] [DEBUG] debug-file - Update task SampleCode_entry:default@CompileArkTS input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\res\default\resources\rawfile cache by regenerate.
+[2026-05-12T19:11:12.516] [DEBUG] debug-file - Update task SampleCode_entry:default@CompileArkTS input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\res\default\ResourceTable.txt cache from map.
+[2026-05-12T19:11:12.516] [DEBUG] debug-file - Update task SampleCode_entry:default@CompileArkTS input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\res\default\ark_module.json cache by regenerate.
+[2026-05-12T19:11:12.516] [DEBUG] debug-file - Update task SampleCode_entry:default@CompileArkTS input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\res\default\resources\base\profile cache by regenerate.
+[2026-05-12T19:11:12.516] [DEBUG] debug-file - Update task SampleCode_entry:default@CompileArkTS input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\src\main\ets cache by regenerate.
+[2026-05-12T19:11:12.520] [DEBUG] debug-file - Update task SampleCode_entry:default@CompileArkTS input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\generated\profile\default\BuildProfile.ets cache by regenerate.
+[2026-05-12T19:11:12.520] [DEBUG] debug-file - Update task SampleCode_entry:default@CompileArkTS output file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\loader_out\default\ets cache.
+[2026-05-12T19:11:12.521] [DEBUG] debug-file - Incremental task SampleCode_entry:default@CompileArkTS post-execution cost:7 ms .
+[2026-05-12T19:11:12.521] [DEBUG] debug-file - Update task SampleCode_entry:default@BuildJS input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\loader\default cache by regenerate.
+[2026-05-12T19:11:12.521] [DEBUG] debug-file - Update task SampleCode_entry:default@BuildJS input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\res\default\resources\rawfile cache by regenerate.
+[2026-05-12T19:11:12.522] [DEBUG] debug-file - Update task SampleCode_entry:default@BuildJS input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\res\default\ResourceTable.txt cache by regenerate.
+[2026-05-12T19:11:12.522] [DEBUG] debug-file - Update task SampleCode_entry:default@BuildJS input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\res\default\ark_module.json cache by regenerate.
+[2026-05-12T19:11:12.522] [DEBUG] debug-file - Update task SampleCode_entry:default@BuildJS input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\res\default\resources\base\profile cache by regenerate.
+[2026-05-12T19:11:12.522] [DEBUG] debug-file - Update task SampleCode_entry:default@BuildJS output file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\loader_out\default\js cache.
+[2026-05-12T19:11:12.523] [DEBUG] debug-file - Incremental task SampleCode_entry:default@BuildJS post-execution cost:2 ms .
+[2026-05-12T19:11:12.523] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task SampleCode_entry:default@CacheNativeLibs is up-to-date.
+[2026-05-12T19:11:12.523] [DEBUG] debug-file - Update task SampleCode_entry:default@GeneratePkgModuleJson input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\res\default\module.json cache from map.
+[2026-05-12T19:11:12.523] [DEBUG] debug-file - Update task SampleCode_entry:default@GeneratePkgModuleJson output file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\package\default\module.json cache.
+[2026-05-12T19:11:12.523] [DEBUG] debug-file - Incremental task SampleCode_entry:default@GeneratePkgModuleJson post-execution cost:1 ms .
+[2026-05-12T19:11:12.523] [DEBUG] debug-file - Incremental task SampleCode_entry:default@ProcessCompiledResources post-execution cost:1 ms .
+[2026-05-12T19:11:12.523] [DEBUG] debug-file - Update task SampleCode_entry:default@PackageHap input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\stripped_native_libs\default cache by regenerate.
+[2026-05-12T19:11:12.523] [DEBUG] debug-file - Update task SampleCode_entry:default@PackageHap input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\res\default\module.json cache from map.
+[2026-05-12T19:11:12.523] [DEBUG] debug-file - Update task SampleCode_entry:default@PackageHap input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\res\default\resources cache by regenerate.
+[2026-05-12T19:11:12.524] [DEBUG] debug-file - Update task SampleCode_entry:default@PackageHap input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\res\default\resources.index cache by regenerate.
+[2026-05-12T19:11:12.524] [DEBUG] debug-file - Update task SampleCode_entry:default@PackageHap input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\outputs\default\pack.info cache by regenerate.
+[2026-05-12T19:11:12.524] [DEBUG] debug-file - Update task SampleCode_entry:default@PackageHap input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\loader_out\default\ets cache by regenerate.
+[2026-05-12T19:11:12.525] [DEBUG] debug-file - Update task SampleCode_entry:default@PackageHap input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\loader_out\default\ets\sourceMaps.map cache by regenerate.
+[2026-05-12T19:11:12.525] [DEBUG] debug-file - Update task SampleCode_entry:default@PackageHap input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\generated\profile\default\BuildProfile.ets cache by regenerate.
+[2026-05-12T19:11:12.525] [DEBUG] debug-file - Update task SampleCode_entry:default@PackageHap output file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\outputs\default\SampleCode_entry-default-unsigned.hap cache.
+[2026-05-12T19:11:12.525] [DEBUG] debug-file - Update task SampleCode_entry:default@PackageHap output file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\source_map\default\sourceMaps.map cache.
+[2026-05-12T19:11:12.525] [DEBUG] debug-file - Update task SampleCode_entry:default@PackageHap output file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\outputs\default\mapping\sourceMaps.map cache.
+[2026-05-12T19:11:12.526] [DEBUG] debug-file - Incremental task SampleCode_entry:default@PackageHap post-execution cost:3 ms .
+[2026-05-12T19:11:12.526] [DEBUG] debug-file - Update task SampleCode_entry:default@SignHap input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\outputs\default\SampleCode_entry-default-unsigned.hap cache from map.
+[2026-05-12T19:11:12.526] [DEBUG] debug-file - Update task SampleCode_entry:default@SignHap output file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\outputs\default\SampleCode_entry-default-signed.hap cache.
+[2026-05-12T19:11:12.526] [DEBUG] debug-file - Incremental task SampleCode_entry:default@SignHap post-execution cost:1 ms .
+[2026-05-12T19:11:12.527] [DEBUG] debug-file - Update task SampleCode_entry:default@CollectDebugSymbol input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\loader_out\default\ets\sourceMaps.map cache by regenerate.
+[2026-05-12T19:11:12.527] [DEBUG] debug-file - Update task SampleCode_entry:default@CollectDebugSymbol input file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\intermediates\libs\default cache by regenerate.
+[2026-05-12T19:11:12.527] [DEBUG] debug-file - Update task SampleCode_entry:default@CollectDebugSymbol output file:F:\kaiyuan\scankit-samplecode-clientdemo-arkts-master\entry\build\default\outputs\default\symbol cache.
+[2026-05-12T19:11:12.527] [DEBUG] debug-file - Incremental task SampleCode_entry:default@CollectDebugSymbol post-execution cost:2 ms .
+[2026-05-12T19:11:12.551] [DEBUG] debug-file - Cleanup worker 0.
+[2026-05-12T19:11:12.551] [DEBUG] debug-file - Worker 0 has been cleaned up.
+[2026-05-12T19:11:12.551] [DEBUG] debug-file - Current idle worker size: 3.
+[2026-05-12T19:11:12.551] [DEBUG] debug-file - Current resident worker size: 4.
+[2026-05-12T19:11:12.551] [DEBUG] debug-file - Cleanup worker 1.
+[2026-05-12T19:11:12.551] [DEBUG] debug-file - Worker 1 has been cleaned up.
+[2026-05-12T19:11:12.551] [DEBUG] debug-file - Current idle worker size: 2.
+[2026-05-12T19:11:12.551] [DEBUG] debug-file - Current resident worker size: 4.
+[2026-05-12T19:11:12.551] [DEBUG] debug-file - Cleanup worker 18.
+[2026-05-12T19:11:12.551] [DEBUG] debug-file - Worker 18 has been cleaned up.
+[2026-05-12T19:11:12.551] [DEBUG] debug-file - Current idle worker size: 1.
+[2026-05-12T19:11:12.551] [DEBUG] debug-file - Current resident worker size: 4.
+[2026-05-12T19:11:12.552] [DEBUG] debug-file - hvigor build process will be closed.
+[2026-05-12T19:11:12.552] [DEBUG] debug-file - java daemon socket close code:1000 reason:close by user
+[2026-05-12T19:11:12.555] [DEBUG] debug-file - session manager: send message to worker process.
+[2026-05-12T19:11:12.556] [DEBUG] debug-file - session manager: send message to worker process.
+[2026-05-12T19:11:12.557] [DEBUG] debug-file - worker[0] exits with exit code 1.
+[2026-05-12T19:11:12.558] [DEBUG] debug-file - worker[1] exits with exit code 1.
+[2026-05-12T19:11:12.559] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
+[2026-05-12T19:11:12.559] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
+[2026-05-12T19:11:12.562] [DEBUG] debug-file - worker[18] exits with exit code 1.

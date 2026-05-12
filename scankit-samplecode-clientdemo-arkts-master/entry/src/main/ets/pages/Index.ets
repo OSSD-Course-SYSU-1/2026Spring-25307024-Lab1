@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 import { CustomButton } from '../common/CommonComponents'
 import { UIContextSelf } from './customScan/model/UIContextSelf';
 
@@ -86,6 +86,15 @@ struct Index {
               mText: $r('app.string.generate_QR_code'), mOnClick: () => {
                 UIContextSelf.pushUrl({
                   url: 'pages/generateBarcode/CreateBarcode',
+                })
+              }
+            })
+
+            // 新增：扫码历史按钮（和其他按钮风格完全一致）
+            CustomButton({
+              mText: '📋 扫码历史', mOnClick: () => {
+                UIContextSelf.pushUrl({
+                  url: 'pages/scanHistory/ScanHistory'
                 })
               }
             })

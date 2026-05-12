@@ -213,6 +213,38 @@ class Index extends ViewPU {
                 }
             }, { name: "CustomButton" });
         }
+        {
+            this.observeComponentCreation2((elmtId, isInitialRender) => {
+                if (isInitialRender) {
+                    let componentCall = new 
+                    // 新增：扫码历史按钮（和其他按钮风格完全一致）
+                    CustomButton(this, {
+                        mText: '📋 扫码历史', mOnClick: () => {
+                            UIContextSelf.pushUrl({
+                                url: 'pages/scanHistory/ScanHistory'
+                            });
+                        }
+                    }, undefined, elmtId, () => { }, { page: "entry/src/main/ets/pages/Index.ets", line: 94, col: 13 });
+                    ViewPU.create(componentCall);
+                    let paramsLambda = () => {
+                        return {
+                            mText: '📋 扫码历史',
+                            mOnClick: () => {
+                                UIContextSelf.pushUrl({
+                                    url: 'pages/scanHistory/ScanHistory'
+                                });
+                            }
+                        };
+                    };
+                    componentCall.paramsGenerator_ = paramsLambda;
+                }
+                else {
+                    this.updateStateVarsOfChildByElmtId(elmtId, {
+                        mText: '📋 扫码历史'
+                    });
+                }
+            }, { name: "CustomButton" });
+        }
         Column.pop();
         Scroll.pop();
         Column.pop();
