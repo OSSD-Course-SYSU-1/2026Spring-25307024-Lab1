@@ -19,9 +19,11 @@ import { StatusBar } from '../../common/StatusBar';
 import { getScanTypeKey } from '../../common/Utils'
 import { UIContextSelf } from '../customScan/model/UIContextSelf';
 import { WindowService } from '../customScan/model/WindowService';
-// 新增：导入保存记录需要的模块
 import { preferences } from '@kit.ArkData';
 import { ScanRecord } from '../../common/mode1/ScanRecord';
+import { ShareUtil } from '../../common/utils/ShareUtil';
+// 导入AR引擎（路径完全匹配你的项目目录）
+import { VisualGeneEngine, EffectConfig } from '../../common/mode1/VisualGeneEngine';
 
 @Extend(Text)
 function labelText() {
@@ -43,40 +45,42 @@ function valueText() {
 @Entry
 @Component
 struct ResultPage {
+  // 原有：扫码结果对象
   @State result: scanBarcode.ScanResult = UIContextSelf.getRouter().getParams() as scanBarcode.ScanResult;
   @State windowService: WindowService = WindowService.getInstance();
 
-  // 新增：页面加载时自动保存扫码记录
+  // 新增：AR特效配置
+  @State effectConfig: EffectConfig = VisualGeneEngine.analyze('');
+
+  // 页面加载时：同时执行「保存记录」+「匹配AR特效」
   async aboutToAppear() {
+    // 1. 原有：保存扫码记录到本地
     await this.saveScanRecord();
+    // 2. 新增：调用AR引擎，匹配对应特效
+    this.effectConfig = VisualGeneEngine.analyze(this.result.originalValue);
   }
 
-  // 新增：保存扫码记录到本地存储的方法
+  // 原有：扫码记录保存方法
   async saveScanRecord() {
     try {
-      // 1. 创建记录对象，用你已有的 getScanTypeKey 获取准确的扫码类型
       const record = new ScanRecord(
         this.result.originalValue,
         getScanTypeKey(this.result.scanType)
       );
 
-      // 2. 初始化本地存储
       const context = getContext(this);
       const prefs = await preferences.getPreferences(context, 'scan_history');
 
-      // 3. 读取已有的历史记录
       const jsonStr = await prefs.get('records', '[]') as string;
       const records: ScanRecord[] = JSON.parse(jsonStr) || [];
 
-      // 4. 把新记录加到最前面（最新的在最上面）
       records.unshift(record);
 
-      // 5. 限制最多保存50条，避免数据过多
+      // 限制最多保存50条历史记录
       if (records.length > 50) {
         records.pop();
       }
 
-      // 6. 保存回本地存储
       await prefs.put('records', JSON.stringify(records));
       await prefs.flush();
 
@@ -88,6 +92,7 @@ struct ResultPage {
 
   build() {
     Stack() {
+      // 原有：扫码结果显示区域
       Column() {
         Column() {
           Text($r('app.string.code_format'))
@@ -102,7 +107,17 @@ struct ResultPage {
             .labelText()
           Text(this.result.originalValue)
             .valueText()
-
+          // 新增：隔空投送/复制按钮
+          Button('📡 隔空投送')
+            .width('60%')
+            .height(48)
+            .fontSize(18)
+            .backgroundColor('#007DFF')
+            .borderRadius(24)
+            .onClick(() => {
+              // 用你页面里实际存在的变量：this.result.originalValue
+              ShareUtil.shareText(this.result.originalValue)
+            })
           if (this.result.scanCodeRect) {
             Text($r('app.string.code_rect'))
               .margin({
@@ -144,6 +159,20 @@ struct ResultPage {
       .alignItems(HorizontalAlign.Center)
       .width('100%')
 
+      // 新增：AR特效叠加层（全屏显示，不遮挡原有内容）
+      Column() {
+        // 特效标题
+        Text(this.effectConfig.title || '扫码结果')
+          .fontSize(22)
+          .fontColor(this.effectConfig.primaryColor)
+          .fontWeight(FontWeight.Bold)
+          .margin({ top: 80 })
+          .shadow({ radius: 10, color: this.effectConfig.primaryColor })
+      }
+      .width('100%')
+      .height('100%')
+
+      // 原有：顶部状态栏
       StatusBar({ title: $r('app.string.result_content') })
         .position({ start: LengthMetrics.vp(-15) })
     }

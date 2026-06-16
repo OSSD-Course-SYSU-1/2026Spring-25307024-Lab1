@@ -4,6 +4,7 @@ if (!("finalizeConstruction" in ViewPU.prototype)) {
 interface ResultPage_Params {
     result?: scanBarcode.ScanResult;
     windowService?: WindowService;
+    effectConfig?: EffectConfig;
 }
 import { LengthMetrics } from "@ohos:arkui.node";
 import type scanBarcode from "@hms:core.scan.scanBarcode";
@@ -14,6 +15,9 @@ import { UIContextSelf } from "@bundle:com.example.scanSample/SampleCode_entry/e
 import { WindowService } from "@bundle:com.example.scanSample/SampleCode_entry/ets/pages/customScan/model/WindowService";
 import preferences from "@ohos:data.preferences";
 import { ScanRecord } from "@bundle:com.example.scanSample/SampleCode_entry/ets/common/mode1/ScanRecord";
+import { ShareUtil } from "@bundle:com.example.scanSample/SampleCode_entry/ets/common/utils/ShareUtil";
+import { VisualGeneEngine } from "@bundle:com.example.scanSample/SampleCode_entry/ets/common/mode1/VisualGeneEngine";
+import type { EffectConfig } from "@bundle:com.example.scanSample/SampleCode_entry/ets/common/mode1/VisualGeneEngine";
 function __Text__labelText(): void {
     Text.fontSize(20);
     Text.textAlign(TextAlign.Start);
@@ -35,6 +39,7 @@ class ResultPage extends ViewPU {
         }
         this.__result = new ObservedPropertyObjectPU(UIContextSelf.getRouter().getParams() as scanBarcode.ScanResult, this, "result");
         this.__windowService = new ObservedPropertyObjectPU(WindowService.getInstance(), this, "windowService");
+        this.__effectConfig = new ObservedPropertyObjectPU(VisualGeneEngine.analyze(''), this, "effectConfig");
         this.setInitiallyProvidedValue(params);
         this.finalizeConstruction();
     }
@@ -45,19 +50,25 @@ class ResultPage extends ViewPU {
         if (params.windowService !== undefined) {
             this.windowService = params.windowService;
         }
+        if (params.effectConfig !== undefined) {
+            this.effectConfig = params.effectConfig;
+        }
     }
     updateStateVars(params: ResultPage_Params) {
     }
     purgeVariableDependenciesOnElmtId(rmElmtId) {
         this.__result.purgeDependencyOnElmtId(rmElmtId);
         this.__windowService.purgeDependencyOnElmtId(rmElmtId);
+        this.__effectConfig.purgeDependencyOnElmtId(rmElmtId);
     }
     aboutToBeDeleted() {
         this.__result.aboutToBeDeleted();
         this.__windowService.aboutToBeDeleted();
+        this.__effectConfig.aboutToBeDeleted();
         SubscriberManager.Get().delete(this.id__());
         this.aboutToBeDeletedInternal();
     }
+    // 原有：扫码结果对象
     private __result: ObservedPropertyObjectPU<scanBarcode.ScanResult>;
     get result() {
         return this.__result.get();
@@ -72,28 +83,34 @@ class ResultPage extends ViewPU {
     set windowService(newValue: WindowService) {
         this.__windowService.set(newValue);
     }
-    // 新增：页面加载时自动保存扫码记录
-    async aboutToAppear() {
-        await this.saveScanRecord();
+    // 新增：AR特效配置
+    private __effectConfig: ObservedPropertyObjectPU<EffectConfig>;
+    get effectConfig() {
+        return this.__effectConfig.get();
     }
-    // 新增：保存扫码记录到本地存储的方法
+    set effectConfig(newValue: EffectConfig) {
+        this.__effectConfig.set(newValue);
+    }
+    // 页面加载时：同时执行「保存记录」+「匹配AR特效」
+    async aboutToAppear() {
+        // 1. 原有：保存扫码记录到本地
+        await this.saveScanRecord();
+        // 2. 新增：调用AR引擎，匹配对应特效
+        this.effectConfig = VisualGeneEngine.analyze(this.result.originalValue);
+    }
+    // 原有：扫码记录保存方法
     async saveScanRecord() {
         try {
-            // 1. 创建记录对象，用你已有的 getScanTypeKey 获取准确的扫码类型
             const record = new ScanRecord(this.result.originalValue, getScanTypeKey(this.result.scanType));
-            // 2. 初始化本地存储
             const context = getContext(this);
             const prefs = await preferences.getPreferences(context, 'scan_history');
-            // 3. 读取已有的历史记录
             const jsonStr = await prefs.get('records', '[]') as string;
             const records: ScanRecord[] = JSON.parse(jsonStr) || [];
-            // 4. 把新记录加到最前面（最新的在最上面）
             records.unshift(record);
-            // 5. 限制最多保存50条，避免数据过多
+            // 限制最多保存50条历史记录
             if (records.length > 50) {
                 records.pop();
             }
-            // 6. 保存回本地存储
             await prefs.put('records', JSON.stringify(records));
             await prefs.flush();
             console.log("扫码记录保存成功:", record.content);
@@ -110,8 +127,11 @@ class ResultPage extends ViewPU {
             Stack.backgroundColor('white');
         }, Stack);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // 原有：扫码结果显示区域
             Column.create();
+            // 原有：扫码结果显示区域
             Column.alignItems(HorizontalAlign.Center);
+            // 原有：扫码结果显示区域
             Column.width('100%');
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
@@ -145,6 +165,27 @@ class ResultPage extends ViewPU {
             __Text__valueText();
         }, Text);
         Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // 新增：隔空投送/复制按钮
+            Button.createWithLabel('📡 隔空投送');
+            // 新增：隔空投送/复制按钮
+            Button.width('60%');
+            // 新增：隔空投送/复制按钮
+            Button.height(48);
+            // 新增：隔空投送/复制按钮
+            Button.fontSize(18);
+            // 新增：隔空投送/复制按钮
+            Button.backgroundColor('#007DFF');
+            // 新增：隔空投送/复制按钮
+            Button.borderRadius(24);
+            // 新增：隔空投送/复制按钮
+            Button.onClick(() => {
+                // 用你页面里实际存在的变量：this.result.originalValue
+                ShareUtil.shareText(this.result.originalValue);
+            });
+        }, Button);
+        // 新增：隔空投送/复制按钮
+        Button.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             If.create();
             if (this.result.scanCodeRect) {
@@ -223,6 +264,33 @@ class ResultPage extends ViewPU {
         }, If);
         If.pop();
         Column.pop();
+        // 原有：扫码结果显示区域
+        Column.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // 新增：AR特效叠加层（全屏显示，不遮挡原有内容）
+            Column.create();
+            // 新增：AR特效叠加层（全屏显示，不遮挡原有内容）
+            Column.width('100%');
+            // 新增：AR特效叠加层（全屏显示，不遮挡原有内容）
+            Column.height('100%');
+        }, Column);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // 特效标题
+            Text.create(this.effectConfig.title || '扫码结果');
+            // 特效标题
+            Text.fontSize(22);
+            // 特效标题
+            Text.fontColor(this.effectConfig.primaryColor);
+            // 特效标题
+            Text.fontWeight(FontWeight.Bold);
+            // 特效标题
+            Text.margin({ top: 80 });
+            // 特效标题
+            Text.shadow({ radius: 10, color: this.effectConfig.primaryColor });
+        }, Text);
+        // 特效标题
+        Text.pop();
+        // 新增：AR特效叠加层（全屏显示，不遮挡原有内容）
         Column.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             __Common__.create();
@@ -231,7 +299,9 @@ class ResultPage extends ViewPU {
         {
             this.observeComponentCreation2((elmtId, isInitialRender) => {
                 if (isInitialRender) {
-                    let componentCall = new StatusBar(this, { title: { "id": 16777275, "type": 10003, params: [], "bundleName": "com.example.scanSample", "moduleName": "SampleCode_entry" } }, undefined, elmtId, () => { }, { page: "entry/src/main/ets/pages/resultPage/ResultPage.ets", line: 147, col: 7 });
+                    let componentCall = new 
+                    // 原有：顶部状态栏
+                    StatusBar(this, { title: { "id": 16777275, "type": 10003, params: [], "bundleName": "com.example.scanSample", "moduleName": "SampleCode_entry" } }, undefined, elmtId, () => { }, { page: "entry/src/main/ets/pages/resultPage/ResultPage.ets", line: 176, col: 7 });
                     ViewPU.create(componentCall);
                     let paramsLambda = () => {
                         return {
