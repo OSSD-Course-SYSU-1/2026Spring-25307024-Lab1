@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SampleCode_entry.iml" filepath="$PROJECT_DIR$/.idea/modules/SampleCode_entry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scankit-samplecode-clientdemo-arkts-master.iml" filepath="$PROJECT_DIR$/.idea/modules/scankit-samplecode-clientdemo-arkts-master.iml" />
+    </modules>
+  </component>
+</project>

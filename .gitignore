@@ -1,0 +1,11 @@
+# 鸿蒙项目构建产物
+.hvigor/
+*.log
+
+# IDE本地配置
+.idea/
+*.preview/
+.vscode/
+
+# 无关临时文件
+import matplotlib.py
